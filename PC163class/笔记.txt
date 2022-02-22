@@ -1,0 +1,11 @@
+a标签中的img如何居中--
+input里的输入缩进怎么实现--text-indent:13px;
+input里的placeholder是一个颜色，输入是另一个颜色怎么设置--
+ul里li的a标签怎么设置文字居中--
+ul得加强！！！！
+譬如.top和.top_banner的最右边的div要怎么实现margin-right:0px;呢--在外层设置相对定位，要改的标签设成绝对定位
+当一个div里有两个ul时如何将一个叠在其中一个上面--最外层的div的position:relative,里面的第二个ul的position:absolute;
+当overflow:hinden失效时的解决方法--外层有定位时只需在本层也加上定位即可;
+一个div里放比它宽还大的ul时使用--overflow:hinden;
+在一个大的div里有两个没有归类的a标签会混淆出错，因此都应该给每个标签归类
+js里面要设置触碰一个小的东西事件时,可以使用延时定时器。

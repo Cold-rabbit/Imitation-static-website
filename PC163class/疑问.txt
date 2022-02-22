@@ -1,0 +1,2 @@
+写JS时的匿名函数是--
+function后面为什么要绑一个bind(this)--
