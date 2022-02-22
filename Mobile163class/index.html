@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<title>网易云课堂官网</title>
+		<script src='./js/rem.js'></script>
+		<style>
+		*{margin:0;padding:0;list-style:none;text-decoration:none;}
+		/*top*/
+		.top{
+			height:2.1rem;
+			width:100%;
+			display:flex;
+		}
+		.top .top_logo{
+			margin:0.55rem 0 0 0.7rem;
+		}
+		.top .top_logo>img{
+			width:4.8rem;
+			height:1rem;
+		}
+		.top .top_click{
+			width:2.6rem;
+			height:0.8rem;
+			border:0.025rem solid #2bc17b;
+			border-radius:0.4rem;
+			margin:0.6rem 0 0 0.4rem;
+			font-size:0.475rem;
+			color:#2bc17b;
+			line-height:0.9rem;
+			text-align:center;
+		}
+		.top .top_search{
+			width:0.55rem;
+			height:0.6rem;
+			margin:0.8rem 0 0 5.475rem;
+			background:url(./img/top_ser.jpg);
+			background-size:0.55rem 0.6rem;
+		}
+		/*top end*/
+		/*banner*/
+		.banner{
+			width:100%;
+			height:5.85rem;
+			position:relative;
+		}
+		.banner>img{
+			width:100%;
+			height:100%;
+		}
+		.banner .banner_point{
+			position:absolute;
+			width:3.6rem;
+			height:0.4rem;
+			bottom:0.75rem;
+			left:calc(50% - 1.8rem);
+			display:flex;
+			justify-content:space-between;
+		}
+		.banner .banner_point>li{
+			width:0.4rem;
+			height:0.4rem;
+			background:rgba(255,255,255,0.5);
+			border-radius:0.2rem;
+		}
+		.banner .banner_point .active{
+			background:rgba(255,255,255,0.9);
+		}
+		/*banner end*/
+		/*major*/
+		.major{
+			width:100%;
+			height:8.15rem;
+		}
+		.major .major_select{
+			width:14.5rem;
+			height:6.15rem;
+			margin:0.85rem 0 0 0.75rem;
+			display:flex;
+			flex-wrap:wrap;
+			align-content:space-between;
+			justify-content:space-between;
+		}
+		.major .major_select>li{
+			width:3.525rem;
+			height:2.65rem;
+			display:flex;
+			flex-wrap:wrap;
+			justify-content:center;
+			align-content:space-between;
+		}
+		.major .major_select>li .major_name{
+			width:1.6rem;
+			height:1.6rem;
+			border-radius:50%;
+			line-height:1.6rem;
+			text-align:center;
+			font-size:0.575rem;
+			color:white;
+		}
+		.major .major_select>li .major_text{
+			font-size:0.7rem;
+			line-height:0.7rem;
+			height:0.7rem;
+		}
+		.major .major_select>li:nth-last-of-type(1) .major_name{
+			background:#fb7659;
+		}
+		.major .major_select>li:nth-last-of-type(2) .major_name{
+			background:#69dbf5;
+		}
+		.major .major_select>li:nth-last-of-type(3) .major_name{
+			background:#2a96e9;
+		}
+		.major .major_select>li:nth-last-of-type(4) .major_name{
+			background:#32c8b0;
+		}
+		.major .major_select>li:nth-last-of-type(5) .major_name{
+			background:#c5a8f8;
+		}
+		.major .major_select>li:nth-last-of-type(6) .major_name{
+			background:#a1d46a;
+		}
+		.major .major_select>li:nth-last-of-type(7) .major_name{
+			background:#f4e119;
+		}
+		.major .major_select>li:nth-last-of-type(8) .major_name{
+			background:#ffbe97;
+		}
+		/*major end*/
+		/*line*/
+		.line{
+			width:100%;
+			height:0.6rem;
+			background:#f2f4f7;
+		}
+		/*line end*/
+		/*hot_class*/
+		.hot_class{
+			width:100%;
+			height:auto;
+		}
+		.hot_class>h1{
+			width:100%;
+			height:2.3rem;
+			line-height:2.3rem;
+			margin:0.25rem 0 0 0.675rem;
+			font-size:0.85rem;
+			color:#3c4a55;
+		}
+		.hot_class .hot_class_content{
+			width:14.7rem;
+			height:auto;
+			margin-left:0.65rem;
+			display:flex;
+			flex-wrap:wrap;
+			justify-content:space-between;
+		}
+		.hot_class .hot_class_content>li{
+			width:7.15rem;
+		}
+		.hot_class .hot_class_content .office_productivity_content_li1{
+			width:100%;
+		}
+		.hot_class .hot_class_content .office_productivity_content_li1 .class_content .class_pic{
+			width:14.7rem;
+			height:6.3rem;
+		}
+		.hot_class .hot_class_content>li .class_content{
+			width:100%;
+			height:100%;
+			display:flex;
+			flex-direction:column;
+			padding-bottom:1.05rem;
+		}
+		.hot_class .hot_class_content>li .class_content .class_pic{
+			width:100%;
+			height:4.05rem;
+		}
+		.hot_class .hot_class_content>li .class_content .class_pic>img{
+			width:100%;
+			height:100%;
+		}
+		.hot_class .hot_class_content>li .class_content .class_text{
+			width:100%;
+			line-height:1.125rem;
+			font-size:0.8rem;
+			color:#3c4a55;
+			margin-top:0.175rem;
+			padding-bottom:0.125rem;
+		}
+		.hot_class .hot_class_content>li .class_content .class_money{
+			width:100%;
+			line-height:0.8rem;
+			text-indent:0.175rem;
+			font-size:0.8rem;
+			color:#ff632a;
+			margin-top:0.35rem;
+		}
+		.hot_class .hot_class_content>li .class_content .class_money>span{
+			font-size:0.65rem;
+			color:#999999;
+			text-decoration:line-through;
+			margin-left:0.25rem;
+		}
+		/*hot_class end*/
+		/*special*/
+		.special{
+			width:100%;
+			height:auto;
+		}
+		.special h1{
+			width:100%;
+			height:2.3rem;
+			line-height:2.3rem;
+			margin:0.25rem 0 0 0.675rem;
+			font-size:0.85rem;
+			color:#3c4a55;
+		}
+		.special .special_content{
+			width:14.7rem;
+			height:auto;
+			margin-left:0.65rem;
+			padding-bottom:0.7rem;
+		}
+		.special .special_content>li{
+			width:100%;
+			height:5.8rem;
+			margin-bottom:0.55rem;
+		}
+		.special .special_content>li>a{
+			width:100%;
+			height:100%;
+		}
+		.special .special_content>li>a>img{
+			width:100%;
+			height:100%;
+		}
+		/*special end*/
+		/*workplace_promotion*/
+		.workplace_promotion{
+			width:100%;
+			height:auto;
+		}
+		.workplace_promotion h1{
+			width:100%;
+			height:2.3rem;
+			line-height:2.3rem;
+			margin:0.25rem 0 0 0.675rem;
+			font-size:0.85rem;
+			color:#3c4a55;
+		}
+		.workplace_promotion .workplace_promotion_content{
+			width:14.7rem;
+			height:auto;
+			margin-left:0.65rem;
+			display:flex;
+			flex-wrap:wrap;
+			justify-content:space-between;
+		}
+		.workplace_promotion .workplace_promotion_content>li{
+			width:7.15rem;
+		}
+		.workplace_promotion .workplace_promotion_content>li .class_content{
+			width:100%;
+			height:100%;
+			display:flex;
+			flex-direction:column;
+			padding-bottom:1.375rem;
+		}
+		.workplace_promotion .workplace_promotion_content>li .class_content .class_pic{
+			width:100%;
+			height:4.05rem;
+		}
+		.workplace_promotion .workplace_promotion_content>li .class_content .class_pic>img{
+			width:100%;
+			height:100%;
+		}
+		.workplace_promotion .workplace_promotion_content>li .class_content .class_text{
+			width:100%;
+			line-height:1.125rem;
+			font-size:0.8rem;
+			color:#3c4a55;
+			margin-top:0.175rem;
+			
+		}
+		/*workplace_promotion end*/
+		/*tail*/
+		.tail{
+			width:100%;
+			height:2rem;
+			background:#f2f4f7;
+			line-height:2rem;
+			text-align:center;
+			font-size:0.55rem;
+			color:#afb5c2;
+		}
+		/*tail end*/
+		/*router*/
+		.router{
+			position:fixed;
+			z-index:20;
+			width:100%;
+			height:2.05rem;
+			border-top:0.05rem solid #e9edf3;
+			bottom:0;
+			background:white;
+		}
+		.router .router_content{
+			width:100%;
+			height:100%;
+			display:flex;
+			justify-content:space-around;
+		}
+		.router .router_content li{
+			width:1.25rem;
+			height:100%;
+		}
+		.router .router_content li.st{
+			width:2.4rem;
+			height:100%;
+		}
+		.router .router_content li>a{
+			width:100%;
+			height:100%;
+			display:flex;
+			flex-wrap:wrap;
+			justify-content:center;
+		}
+		.router .router_content li>a>img{
+			width:1rem;
+			height:0.9rem;
+			margin-top:0.15rem;
+		}
+		.router .router_content li.st>a>img{
+			width: 1rem;
+			height: 0.875rem;
+		}
+		.router .router_content li.user>a>img{
+			width: 0.875rem;
+			height: 0.975rem;
+		}
+		.router .router_content li>a>p{
+			font-size:0.575rem;
+			color:#3e4b56;
+		}
+		</style>
+	</head>
+	<body>
+		<!--头部布局-->
+		<div class='top'>
+			<a href='#' class='top_logo'>
+				<img src='img/top_logo.jpg'>
+			</a>
+			<div class='top_click'>App查看</div>
+			<div class='top_search'></div>
+		</div>
+		<!--轮播图-->
+		<div class='banner'>
+			<img src="img/banner_img.webp" >
+			<ul class='banner_point'>
+				<li class='active'></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<!--专业模块-->
+		<div class='major'>
+			<ul class='major_select'>
+				<li>
+					<div class='major_name'>微</div>
+					<p class='major_text'>微专业</p>
+				</li>
+				<li>
+					<div class='major_name'>职</div>
+					<p class='major_text'>职业提升</p>
+				</li>
+				<li>
+					<div class='major_name'>IT</div>
+					<p class='major_text'>编程开发</p>
+				</li>
+				<li>
+					<div class='major_name'>AI</div>
+					<p class='major_text'>人工智能</p>
+				</li>
+				<li>
+					<div class='major_name'>产</div>
+					<p class='major_text'>产品运营</p>
+				</li>
+				<li>
+					<div class='major_name'>设</div>
+					<p class='major_text'>设计创意</p>
+				</li>
+				<li>
+					<div class='major_name'>商</div>
+					<p class='major_text'>电子商务</p>
+				</li>
+				<li>
+					<div class='major_name'>语</div>
+					<p class='major_text'>语言学习</p>
+				</li>
+			</ul>
+		</div>
+		<!--line-->
+		<div class='line'></div>
+		<!--课程模块-->
+		<div class='hot_class'>
+			<h1>畅销好课</h1>
+			<ul class='hot_class_content'>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/hot_class_p1.jpg'>
+						</div>
+						<p class='class_text'>听得懂的金融思维课</p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/hot_class_p2.jpg'>
+						</div>
+						<p class='class_text'>能帮你赚到钱的50节商业思维提升课</p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/hot_class_p3.jpg'>
+						</div>
+						<p class='class_text'>25堂通识阅读课&nbsp;带你打破知识边界</p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/hot_class_p4.jpg'>
+						</div>
+						<p class='class_text'>如何与老板有效沟通</p>
+						<p class='class_money'>￥69<span>￥199</span></p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/hot_class_p5.jpg'>
+						</div>
+						<p class='class_text'>韩松2018手机摄影课</p>
+						<p class='class_money'>￥99<span>￥199</span></p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/hot_class_p6.jpg'>
+						</div>
+						<p class='class_text'>两米青年带你玩转短视频自媒体</p>
+						<p class='class_money'>￥49<span>￥99</span></p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--line-->
+		<div class='line'></div>
+		<!--专题模块-->
+		<div class='special'>
+			<h1>专题</h1>
+			<ul class='special_content'>
+				<li>
+					<a href='#'>
+						<img src='img/special_pic1.jpg'>
+					</a>
+				</li>
+				<li>
+					<a href='#'>
+						<img src='img/special_pic2.jpg'>
+					</a>
+				</li>
+				<li>
+					<a href='#'>
+						<img src='img/special_pic3.jpg'>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--line-->
+		<div class='line'></div>
+		<!--职场提升模块-->
+		<div class='workplace_promotion'>
+			<h1>职场提升</h1>
+			<ul class='workplace_promotion_content'>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic1.jpg'>
+						</div>
+						<p class='class_text'>如何成为情绪成熟的人？</p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic2.jpg'>
+						</div>
+						<p class='class_text'>演讲训练营：能讲会讲、霸占职场</p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic3.jpg'>
+						</div>
+						<p class='class_text'>重构你喜爱的人生</p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic4.jpg'>
+						</div>
+						<p class='class_text'>如何开公司</p>
+						
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic5.jpg'>
+						</div>
+						<p class='class_text'>小米商战课</p>
+						
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic6.jpg'>
+						</div>
+						<p class='class_text'>黄金人脉：发觉你身边的隐形财富</p>
+						
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--line-->
+		<div class='line'></div>
+		<!--办公效率模块-->
+		<div class='office_productivity hot_class'>
+			<h1>办公效率</h1>
+			<ul class='hot_class_content'>
+				<li class='office_productivity_content_li1'>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/office_productivity_pic1.jpg'>
+						</div>
+						<p class='class_text'>我懂个P</p>
+						<p class='class_money'>￥269<span>￥299</span></p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/office_productivity_pic2.jpg'>
+						</div>
+						<p class='class_text'>交互式PPT</p>
+						<p class='class_money'>￥168<span>￥199</span></p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/office_productivity_pic3.jpg'>
+						</div>
+						<p class='class_text'>Excel+PPT+Word修炼营小白变高手</p>
+						<p class='class_money'>￥399<span>￥2080</span></p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/office_productivity_pic4.jpg'>
+						</div>
+						<p class='class_text'>和阿文一起学信息图表</p>
+						<p class='class_money'>￥175<span>￥199</span></p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/office_productivity_pic5.jpg'>
+						</div>
+						<p class='class_text'>OmniFocus&nbsp;for<br/>iOS</p>
+						<p class='class_money'>￥149</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--line-->
+		<div class='line'></div>
+		<!--语言留学模块-->
+		<div class='office_productivity hot_class'>
+			<h1>语言留学</h1>
+			<ul class='hot_class_content'>
+				<li class='office_productivity_content_li1'>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/Language_study_abroad_pic1.jpg'>
+						</div>
+						<p class='class_text'>More&nbsp;&nbsp;Than&nbsp;&nbsp;Career&nbsp;&nbsp;English</p>
+						
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/Language_study_abroad_pic2.jpg'>
+						</div>
+						<p class='class_text'>英语口语革命【外教+证书】</p>
+						
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/Language_study_abroad_pic3.jpg'>
+						</div>
+						<p class='class_text'>进击吧！日本语</p>
+						
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/Language_study_abroad_pic4.jpg'>
+						</div>
+						<p class='class_text'>Frank&nbsp;365天陪伴式英语私教课</p>
+						
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/Language_study_abroad_pic5.jpg'>
+						</div>
+						<p class='class_text'>雅思口语从5分到7分提分必修课</p>
+						
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--line-->
+		<div class='line'></div>
+		<!--个人理财模块-->
+		<div class='office_productivity hot_class'>
+			<h1>个人理财</h1>
+			<ul class='hot_class_content'>
+				<li class='office_productivity_content_li1'>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/Language_study_abroad_pic1.jpg'>
+						</div>
+						<p class='class_text'>More&nbsp;&nbsp;Than&nbsp;&nbsp;Career&nbsp;&nbsp;English</p>
+						
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/Language_study_abroad_pic2.jpg'>
+						</div>
+						<p class='class_text'>英语口语革命【外教+证书】</p>
+						
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/Language_study_abroad_pic3.jpg'>
+						</div>
+						<p class='class_text'>进击吧！日本语</p>
+						
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/Language_study_abroad_pic4.jpg'>
+						</div>
+						<p class='class_text'>Frank&nbsp;365天陪伴式英语私教课</p>
+						
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/Language_study_abroad_pic5.jpg'>
+						</div>
+						<p class='class_text'>雅思口语从5分到7分提分必修课</p>
+						
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--line-->
+		<div class='line'></div>
+		<!--摄影影视模块-->
+		<div class='workplace_promotion'>
+			<h1>摄影影视</h1>
+			<ul class='workplace_promotion_content'>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic1.jpg'>
+						</div>
+						<p class='class_text'>如何成为情绪成熟的人？</p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic2.jpg'>
+						</div>
+						<p class='class_text'>演讲训练营：能讲会讲、霸占职场</p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic3.jpg'>
+						</div>
+						<p class='class_text'>重构你喜爱的人生</p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic4.jpg'>
+						</div>
+						<p class='class_text'>如何开公司</p>
+						
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic5.jpg'>
+						</div>
+						<p class='class_text'>小米商战课</p>
+						
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic6.jpg'>
+						</div>
+						<p class='class_text'>黄金人脉：发觉你身边的隐形财富</p>
+						
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--line-->
+		<div class='line'></div>
+		<!--兴趣生活模块-->
+		<div class='workplace_promotion'>
+			<h1>兴趣生活</h1>
+			<ul class='workplace_promotion_content'>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic1.jpg'>
+						</div>
+						<p class='class_text'>如何成为情绪成熟的人？</p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic2.jpg'>
+						</div>
+						<p class='class_text'>演讲训练营：能讲会讲、霸占职场</p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic3.jpg'>
+						</div>
+						<p class='class_text'>重构你喜爱的人生</p>
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic4.jpg'>
+						</div>
+						<p class='class_text'>如何开公司</p>
+						
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic5.jpg'>
+						</div>
+						<p class='class_text'>小米商战课</p>
+						
+					</a>
+				</li>
+				<li>
+					<a href='#' class='class_content'>
+						<div class='class_pic'>
+							<img src='img/workplace_promotion_pic6.jpg'>
+						</div>
+						<p class='class_text'>黄金人脉：发觉你身边的隐形财富</p>
+						
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--尾部模块-->
+		<div class='tail'>
+			©1997-2019&nbsp;网易公司&nbsp;版权所有
+		</div>
+		<!--router路由模块-->
+		<div class='router'>
+			<ul class='router_content'>
+				<li>
+					<a href='#'>
+						<img src='img/home.gif'>
+						<p>首页</p>
+					</a>
+				</li>
+				<li class='st'>
+					<a href='#'>
+						<img src='img/st.gif'>
+						<p>我的学习</p>
+					</a>
+				</li>
+				<li class='user'>
+					<a href='#'>
+						<img src='img/user.gif'>
+						<p>账号</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
